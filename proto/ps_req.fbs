@@ -1,0 +1,30 @@
+namespace mindalpha_serving;
+
+table Cell {
+    hash_codes: [uint64];
+}
+
+table Column {
+    level:uint64;
+    cells: [Cell];
+}
+
+table LevelIndex {
+    indexs: [uint64];
+}
+
+table IndexBatch {
+    rows: uint64;
+    levels: uint64;
+    names: [string];
+    columns: [Column];
+    last_level_index_tree: [LevelIndex];
+}
+
+table Request {
+    algo_name: string;
+    index_batchs: [IndexBatch];
+    version: string;  // v1:tensor(default), v2:value array
+}
+
+root_type Request;

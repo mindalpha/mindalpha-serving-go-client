@@ -1,0 +1,14 @@
+namespace mindalpha_serving;
+
+table Tensor {
+    values: [byte];
+    scores: [float];
+}
+
+table Response {
+    version: string;
+    tensor: Tensor;
+    debug_info: string;
+}
+
+root_type Response;
