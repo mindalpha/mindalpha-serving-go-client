@@ -132,28 +132,28 @@ ib.Free()
 ```
 
 **The detail usage please refer to: [demo code](predict/predictor_test.go) and [predict/](predict/)** <br>
-**The data used by demo code comes from [data/](data)**
+**The data used by demo code comes from [data/](/data)**
 
 ## Data
 Data used by this client code. <br>
 The above demo code uses data from which to construct IndexBatch. <br>
-To learn more about the data information, please refer to **[data/](data/)**
+To learn more about the data information, please refer to **[data/](/data/)**
 
 ## Submodules
 ### Log interface
-Defination and document of log interface please refer to [logger/](logger/)
+Defination and document of log interface please refer to [logger/](/logger/)
 
 ### Service discovery / Connection pool
-Please refer to [pool](pool/), usage of it please refer to [Predic() method](predict/predictor.go) and test cases under path [predict/](predict). <br>
+Please refer to [pool](/pool/), usage of it please refer to [Predic() method](/predict/predictor.go) and test cases under path [predict/](/predict). <br>
 **Users just need to config the configuration of consul and connection pool when you use this client**
 
 ### IndexBatch
-The defination and usage of IndexBatch please refer to [fe/](fe/)
+The defination and usage of IndexBatch please refer to [fe/](/fe/)
 
 ### Online predict
-The usage of online predict method please refer to [Predic() method](predict/predictor.go) and [demo code](predict/predictor_test.go)
+The usage of online predict method please refer to [Predic() method](/predict/predictor.go) and [demo code](/predict/predictor_test.go)
 
 ### Proto
-Protocal defination: [proto/](proto/) <br>
-Generated code: [gen/](gen/) <br>
+Protocal defination: [proto/](/proto/) <br>
+Generated code: [gen/](/gen/) <br>
 **Do Not Modify Protocal, it will not compatible with MindAlpha-Serving service**

@@ -137,5 +137,5 @@ ib.AddColumn("column 3", "col3_val7", 2, 2)
 6. func (this *IndexedColumn) LoadFromCsvFile(csv_file, column_name_file string, gen_with_score bool) <br>
     Load data from csv_file and use it constuct IndexBatch. <br>
     Data in csv_file is the returned string of GetRowFeatures(). (User may add a label to the returned string of GetRowFeatures()) <br>
-    column_name_file stores the column names, its format please refer to [column_name_file](data/column_name_criteo.txt) <br>
+    column_name_file stores the column names, its format please refer to [column_name_file](/data/column_name_criteo.txt) <br>
     gen_with_score: If users save the returned string of GetRowFeatures() to file directly, the value of gen_with_score is false; If users add a label before the returned string of GetRowFeatures(), then this value should be true. <br>
