@@ -29,10 +29,10 @@ for i := 0; i < predicotor.GetScoreSize(); i++ {
 ## Test Cases
 1. predict/predictor_csv_replay_test.go <br>
     Construct IndexBatch from csv file, then request MindAlpha-Serving service and print the scores. <br>
-    The format of csv_file and column_name_file used by this test file please refer to **[data/](data/)**
+    The format of csv_file and column_name_file used by this test file please refer to **[data/](/data/)**
 2. predict/predictor_test.go <br>
     Calls AddColumn to construct a 3 level, 39 column, 1 row IndexBatch. <br>
-    The data used to construct IndexBatch comes from **[data/day_0_0.001_train-ib-format.csv](data/day_0_0.001_train-ib-format.csv)** and **[data/column_name_criteo.txt](/data/column_name_criteo.txt)**. <br>
+    The data used to construct IndexBatch comes from **[data/day_0_0.001_train-ib-format.csv](/data/day_0_0.001_train-ib-format.csv)** and **[data/column_name_criteo.txt](/data/column_name_criteo.txt)**. <br>
     This test case uses the first row of file **data/day_0_0.001_train-ib-format.csv** as column value, and uses the content of **data/column_name_criteo.txt** as column name.
 3. predict/predictor_csv_replay_ib_reuse_test.go <br>
     Test IndexBatch memory pool. When you do not need the IndexBatch, you should put it to memory pool.

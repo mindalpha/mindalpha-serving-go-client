@@ -9,12 +9,12 @@ For a advertise request, it has three level features, the fitst level is request
 A request may have multiple campains, each campain has multiple creatives. We use IndexBatch to represent this three level features.<br>
 
 We use the following struct to show a ad request <br>
-![GitHub](pictures/request-define.jpg "request definition")
+![GitHub](/pictures/request-define.jpg "request definition")
 
 Business code will construct IndexBatch use features from above request <br>
 
 The following picture is a visual show of IndexBatch<br>
-![GitHub](pictures/IndexBatch__of_a_request.png "IndexBatch before optimize")
+![GitHub](/pictures/IndexBatch__of_a_request.png "IndexBatch before optimize")
 
 Above IndexBatch:
 1. has 3 level: level 0, level 1, level 2
@@ -41,7 +41,7 @@ We can conclude from above IndexBatch:
 4. feature columns "column 2" & "column 3" is  level 2 features: values of each row is different <br>
 
 **In the above IndexBatch, column of level 0 / level 1 has duplicated values, we can compress the duplicated values. The IndexBatch after compression is as follows** <br>
-![GitHub](pictures/IndexBatch_After_Optimize.png "IndexBatch after optimize")
+![GitHub](/pictures/IndexBatch_After_Optimize.png "IndexBatch after optimize")
 ***Note: The above IndexBatch after compression is equivalent to the IndexBatch before compression*** <br>
 We can conclude from the above IndexBatch after compression: <br>
 1. feature column "column 0" is compressed to 1 row
