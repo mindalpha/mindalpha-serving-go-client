@@ -32,10 +32,10 @@ for i := 0; i < predicotor.GetScoreSize(); i++ {
 1. predict/predictor_csv_replay_test.go <br>
     *  从csv文件读取数据构造IndexBatch 并请求MindAlpha-Serving，打印score
     *  该测试文件展示了如何从 csv 文件中读取特征数据并将其构造为IndexBatch, 然后请求MindAlpha-Serving服务在线预测score的基本流程.
-    *  该测试文件中用到的csv_file 和 column_name_file 内容及格式说明参考 **[数据文件 data/](data/)**
+    *  该测试文件中用到的csv_file 和 column_name_file 内容及格式说明参考 **[数据文件 data/](/data/)**
 2. predict/predictor_test.go <br>
     *  调用AddColumn构造一个 3 level，39 column, 1 row 的IndexBatch，
-    *  构造IndexBatch所使用的数据,也就是AddColumn()方法所使用的参数, 来自数据文件 **[data/day_0_0.001_train-ib-format.csv](data/day_0_0.001_train-ib-format.csv)** 的第一行和特征列名字文件 **[data/column_name_criteo.txt](/data/column_name_criteo.txt)**.
+    *  构造IndexBatch所使用的数据,也就是AddColumn()方法所使用的参数, 来自数据文件 **[data/day_0_0.001_train-ib-format.csv](/data/day_0_0.001_train-ib-format.csv)** 的第一行和特征列名字文件 **[data/column_name_criteo.txt](/data/column_name_criteo.txt)**.
 3. predict/predictor_csv_replay_ib_reuse_test.go <br>
     *  测试IndexBatch内存池. IndexBatch使用完毕后调用Free方法将底层存储放到内存池中。 该测试用例不断的构造IndexBatch(通过fe.NewIndexedColumn()方法，该方法可能会从内存池中获取内存)并调用Free方法, 然后检查每次构造的IndexBatch通过Predict方法在线预测打分是否一致.
 

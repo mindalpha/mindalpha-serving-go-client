@@ -10,13 +10,13 @@
 表示特征的层级，比如level 0 对应该请求的请求/设备信息， level 1 对应该请求的单子级信息, level 2对应该请求的素材级信息。<br>
 
 我们用如下的代码大致展示一下一个请求的定义: <br>
-![GitHub](pictures/request-define.jpg "request definition")
+![GitHub](/pictures/request-define.jpg "request definition")
 
 业务代码会根据上面提到的广告请求，提取、构造一些特征， 然后用这些提取构造的特征去构造IndexBatch <br>
 
 下图是IndexBatch的一个形象的展示。
 
-![GitHub](pictures/IndexBatch__of_a_request.png "IndexBatch before optimize")
+![GitHub](/pictures/IndexBatch__of_a_request.png "IndexBatch before optimize")
 
 
 上面的IndexBatch中：
@@ -45,7 +45,7 @@
 
 **由于上述的IndexBatch中, 不同行的 level 0 / level 1 的特征列的值存在重复的, 我们可以将重复的特征值合并压缩, 这样可以节省空间. 压缩后的IndexBatch如下:** <br>
 
-![GitHub](pictures/IndexBatch_After_Optimize.png "IndexBatch after optimize")
+![GitHub](/pictures/IndexBatch_After_Optimize.png "IndexBatch after optimize")
 
 **上面的压缩后的IndexBatch 和 压缩前的IndexBatch是等价的**.<br>
 从上面的压缩后的IndexBatch我们可以看出:

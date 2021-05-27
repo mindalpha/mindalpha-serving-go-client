@@ -19,4 +19,4 @@ The step of using log interface (logger/logger_seelog_test.go 和 logger/logger_
 1. define type mylogger struct {}, implement the above MindAlphaServingClientLogger interface.
 2. call logger.SetMindAlphaServingClientLogger(mylogger), let mindalpha-serving-go-client use you log implementation.
 3. call logger.GetMindAlphaServingClientLogger().Debugf() logger.GetMindAlphaServingClientLogger().Infof() to log logs.
-You can refer to [logger_seelog_test.go](logger/logger_seelog_test.go) and [logger_logrus_test.go](logger/logger_logrus_test.go).
+You can refer to [logger_seelog_test.go](/logger/logger_seelog_test.go) and [logger_logrus_test.go](/logger/logger_logrus_test.go).
