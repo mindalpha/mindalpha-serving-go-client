@@ -141,7 +141,7 @@ ib.AddColumn("column 3", "col3_val7", 2, 2)
 6. func (this *IndexedColumn) LoadFromCsvFile(csv_file, column_name_file string, gen_with_score bool) <br>
     从csv_file 文件中加载数据，并将其转换为IndexBatch. <br>
     csv_file文件中的数据即为GetRowFeatures()返回的数据(用户也可以在将GetRowFeatures()返回的数据落文件前加上该行预测得到的score信息). <br>
-    column_name_file中保存有各个特征列的名字, 其格式参考文件 [column_name_file](data/column_name_criteo.txt) <br>
+    column_name_file中保存有各个特征列的名字, 其格式参考文件 [column_name_file](/data/column_name_criteo.txt) <br>
     gen_with_score： 如果用户将GetRowFeatures()返回的数据直接落文件，则将该值设置为false；如果用户在GetRowFeatures()返回的数据前添加了该行对应的score值，则该值设置为true.
  
 ### 

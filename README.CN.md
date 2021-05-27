@@ -136,29 +136,29 @@ for i := 0; i < score_num; i++ {
 ib.Free()
 
 ```
-**完整的示例代码请参考: [示例代码](predict/predictor_test.go), 示例代码中构造IndexBatch所使用的的数据请参考 [data/](data/)**
+**完整的示例代码请参考: [示例代码](/predict/predictor_test.go), 示例代码中构造IndexBatch所使用的的数据请参考 [data/](/data/)**
 
 ## data
 本客户端用到的数据.<br>
-上面的示例代码中构造IndexBatch所使用的数据来自[data/](data/)目录.<br>
-想了解更多的数据信息，请参考[data/](data/)
+上面的示例代码中构造IndexBatch所使用的数据来自[data/](/data/)目录.<br>
+想了解更多的数据信息，请参考[data/](/data/)
 
 ## 各个子模块介绍
 ### 日志接口的使用
-日志接口的定义及说明文档在[logger/](logger/) 路径下
+日志接口的定义及说明文档在[logger/](/logger/) 路径下
 
 ### 连接池的实现与使用
-连接池详情参考[pool](pool/), 其使用方法也可结合[Predic()方法](predict/predictor.go)以及[predict/](predict)下的测试用例来了解. <br>
+连接池详情参考[pool](/pool/), 其使用方法也可结合[Predic()方法](/predict/predictor.go)以及[predict/](/predict)下的测试用例来了解. <br>
 **用户使用该客户端时，只需要设置连接池的配置参数和初始化连接池就可以了.**
 
 ### IndexBatch说明与使用
-IndexBatch实现及说明请参考[fe/](fe/)
+IndexBatch实现及说明请参考[fe/](/fe/)
 
 ### 在线预测客户端接口的实现与使用
-具体的代码请参考[示例代码](predict/predictor_test.go)
+具体的代码请参考[示例代码](/predict/predictor_test.go)
 
 ### flatbuffer协议定义
-协议定义: [proto/](proto/) <br>
-协议生成的代码: [gen/](gen/) <br>
+协议定义: [proto/](/proto/) <br>
+协议生成的代码: [gen/](/gen/) <br>
 **用户不要修改该协议，否则会与MindAlpha-Serving服务端不兼容.**
 
